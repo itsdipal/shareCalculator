@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <title>Share Calculator</title>
+</head>
+
+<body class="container">
+  <nav class="navbar">
+
+    <div class="home"><i class="bx bx-receipt" style="color:green"></i>
+      Share Calculator</div>
+    <ul class="navitem">
+      <li><a href="#Information">Services</a></li>
+      <li><a href="#Information">Info</a></li>
+      <li><a href="#Information">About</a></li>
+    </ul>
+    <div class="dropdown">
+      <button class="btn" id="btn">
+        Other tools
+        <i class="bx bx-chevron-down" id="arrow"></i>
+      </button>
+      <div class="dropdown-item" id="dropdown">
+        <a href="#">RoI</a>
+        <a href="#">Average</a>
+        <a href="#">SPI</a>
+      </div>
+    </div>
+  </nav>
+  <div class="second-container">
+    <div class="image-container">
+      <img src="calculator1.jpg" alt="Girl in a jacket" />
+    </div>
+
+    <div class="startnow">
+      <h1>Calculate your <span>share profits</span> now.</h1>
+
+
+      <div class="second-btn">
+        <a href="#calculation" class="action-btn start-btn" style="text-decoration:none">Start</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="third-container">
+    <div class="calculation" id="calculation">
+      <div class="transaction-type">
+
+        <input class="input" type="radio" id="Sell" name="transaction" value="Sell" checked />
+        <label for="Sell">Sell</label>
+        <input class="input" type="radio" id="Buy" name="transaction" value="Buy" />
+        <label for="Buy">Buy</label>
+      </div>
+
+      <p id="sell-rate-container">
+        Sell Rate
+        <input class="input" type="number" id="sell-rate" min="0" max="500000" placeholder="0.00" />
+      </p>
+      <p>
+        Purchase Rate
+        <input class="input" type="number" id="purchase-rate" min="0" max="500000" value="" placeholder="0.00" />
+      </p>
+      <p>
+        Quantity
+        <input class="input" type="number" id="quantity" min="0" max="50000" value="" placeholder="0.00" />
+      </p>
+
+      <p id="invester-type-container">
+        Invester Type
+        <select id="invester-type">
+          <option value="Individual">Individual</option>
+          <option value="Institutional">Institutional</option>
+        </select>
+      </p>
+
+      <p id="cgt-container">
+        Capital Gain Tax
+        <select id="cgtper">
+          <option value="5%">5%</option>
+          <option value="7.5%">7.5%</option>
+        </select>
+      </p>
+
+      <div class="calcbtn-container">
+        <button class="btn" id="calculate">Calculate</button>
+      </div>
+    </div>
+
+    <div class="details-card">
+      <h1>Details</h1>
+
+      <div class="details-row">
+        <span style=" font-size: 20px;
+   font-weight: 500;color:black;">Factor</span>
+        <span>RS</span>
+      </div>
+      <div class="details-row">
+        <span>Total Amount</span>
+        <span id="dtotal">0.00</span>
+      </div>
+      <div class="details-row highlight">
+        <span>* Commission</span>
+        <span id="dcommission">0.00</span>
+      </div>
+      <div class="details-row">
+        <span>SEBON FEE</span>
+        <span id="dsebon">0.00</span>
+      </div>
+      <div class="details-row">
+        <span>DP Charge</span>
+        <span id="dcharge">0.00</span>
+      </div>
+      <div class="details-row">
+        <span>Capital Gain Tax</span>
+        <span id="dcgt">0.00</span>
+      </div>
+
+      <div class="details-row total">
+        <span id="dtar-tap">Total Amount Receivable</span>
+        <span id="dtar">0.00</span>
+      </div>
+
+      <div class="details-row profit">
+        <span id="pl_ap">Profit/Loss</span>
+        <span id="pl_ap-value">0.00</span>
+      </div>
+      <p class="note"></p>
+
+      <div class="calcbtn-container">
+        <button class="btn" id="clearButton">Clear</button>
+      </div>
+    </div>
+  </div>
+
+<div class="fourth-container" id="Information"> 
+  <section>
+    <h2>Services</h2>
+    <article>
+      <p>Tools to calculate profit/loss in shares</p>
+      <p>ROI and average price calculators</p>
+      <p>Tax and commission estimators</p>
+      <p>Portfolio management assistance</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Info</h2>
+    <article>
+      <p>Share price fluctuates daily based on demand and supply</p>
+      <p>Higher quantity doesn’t always mean higher profit,rates matter</p>
+      <p>Capital Gain Tax applies differently for individuals and institutions</p>
+      <p>Brokerage commission is charged on every transaction</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>About</h2>
+    <article>
+      <p>A simple platform built for investors in Nepal</p>
+      <p>Designed to explain charges and profits clearly</p>
+      <p>Useful for both beginners and experienced traders</p>
+      <p>Focused on transparency and ease of use</p>
+    </article>
+  </section>
+</div>
+
+<div class="footer">Copyright © 2025.All Rights Reserved</div>
+
+  <script src="script.js"></script>
+</body>
+
+
+</html>
